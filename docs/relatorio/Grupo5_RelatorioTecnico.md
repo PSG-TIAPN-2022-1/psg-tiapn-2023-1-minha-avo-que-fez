@@ -135,7 +135,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001|O sistema deve ser responsivo para rodar em um dispositivos móvel|MÉDIA|
 |RNF-002|Apenas indivíduos ou pequenas empresas podem se registrar|MÉDIA|
-|RNF-003|O software |MÉDIA|
 
 ## Restrições
 
@@ -156,9 +155,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 ![Userflow_Produtor](images/Userflow_Produtor.png "Userflow Produtor")
 
 ## Wireframes
-
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
-
 
 # Metodologia
 
