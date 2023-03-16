@@ -1,7 +1,7 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-Minha Avó Que Fez!
+Tempero de casa
 
 `CURSO`
 
@@ -81,6 +81,8 @@ tem dificuldades em começar um negócio próprio.
 Produtores de alimentos orgânicos/caseiros que buscam novos clientes ou que desejam começar um negócio, mas não possuem grande conhecimentos tecnológicos para divulgar tais serviços de maneira efetiva.
 
 Consumidores de alimentos orgânicos e/ou caseiros que desejam encontrar bons produtores, seja para consumo pessoal, para eventos, etc, a preços acessíveis; assim como aqueles que desejam alimentos com ingredientes/aparência escolhidos a dedo.
+
+Apesar do software ser aberto para todas as faixas etárias, o desenvolvimento será voltada a população idosa (50 anos acima), visando melhorar a usabilidade e tornar o ambiente mais intuitivo.
  
 # Especificações do Projeto
 
@@ -132,6 +134,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001|O sistema deve ser responsivo para rodar em um dispositivos móvel|MÉDIA|
+|RNF-002|Apenas indivíduos ou pequenas empresas podem se registrar|MÉDIA|
+|RNF-003|O software |MÉDIA|
 
 ## Restrições
 
@@ -139,8 +143,10 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01|O projeto deverá ser entregue até o final do semestre|
-|02|O projeto deve exigir Registro e Login APENAS PARA PRODUTORES|
+|RE-01|O projeto deve exigir Registro e Login apenas para produtores|
+|RE-02|O projeto atende apenas a população Brasileira|
+|RE-03|O software não deve realizar o contato entre Produtor e Consumidor|
+|RE-04|O software não deve realizar transações|
 
 # Projeto de Interface
 
