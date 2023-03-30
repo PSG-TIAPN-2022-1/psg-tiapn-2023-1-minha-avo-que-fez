@@ -1,6 +1,4 @@
-# Minha Avó que Fez. 
-
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+# Tempero de casa. 
 
 O projeto tem como objetivo principal de desenvolver uma solução de software que atenda aos pequenos
 produtores de alimentos artesanais, auxiliando-os a crescer ou até mesmo a criar seu próprio
