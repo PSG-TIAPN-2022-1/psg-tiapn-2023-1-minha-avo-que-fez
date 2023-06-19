@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.fluid{
+    grid-column:1/-1;
+    width: 100%;
+}
+
+
+main{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-items: center;
+}
+
+.userData{
+    background-color: brown;
+    padding: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.userData img{
+    width: 48px;
+}
+
+.foodList{
+    max-width: 750px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px;
+}
+
+.card{
+    width: 100%;
+    background-image: linear-gradient(to left bottom, white, whitesmoke);
+    padding: 8px;
+    border-radius: 0.5em;
+    box-shadow: 5px 5px 8px gray;
+    transition: 300ms;
+}
+
+.card:hover{
+    transform: scale(120%);
+    box-shadow: 6px 6px 8px gray;
+}
+
+.card img{
+    width: 120px;
+    height: 120px;
+    border-radius: 1em;
+    display: block;
+    margin: 0px auto;
+    object-fit: cover;
+}

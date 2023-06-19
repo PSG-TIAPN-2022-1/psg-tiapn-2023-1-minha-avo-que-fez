@@ -1,0 +1,90 @@
+#main{
+    background-color: red;
+}
+
+#main p{
+    
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 32px;
+}
+
+main h1{
+    grid-column: 1/-1;
+}
+
+main .map{
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    grid-column: 1/-1;
+}
+
+main .sobre{
+    background-color: var(--primaryColor);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 400px));
+    justify-content: center;
+    gap: 16px;
+    padding: 32px;
+}
+
+main .carousel{
+    width: 100%;
+}
+
+main .carousel img{
+    width: 100%;
+}
+
+main .usuariosDestaque{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+main .usuariosDestaque .card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+main .usuariosDestaque .card img{
+    grid-column: 1/-1;
+    width: 100%;
+}
+
+main .usuariosDestaque .card p{
+    column-span: 1;
+}
+
+/*
+.hero{
+    position: relative;
+}
+
+.hero img{
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+}
+
+.hero h2{
+    position: absolute;
+    top: 0px;
+    margin: auto;
+    bottom: 0px;
+}
+*/
+
+@media screen and (max-width: 600px){
+    main .sobre{
+        grid-template-columns: 1fr;
+    }
+}
