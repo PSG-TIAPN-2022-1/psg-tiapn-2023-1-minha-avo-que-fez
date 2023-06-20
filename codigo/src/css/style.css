@@ -1,0 +1,241 @@
+
+* { /** TIRAR A MARGEM E O PADDING QUE VEM AUTOMATICO**/
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height:100vh ; /** Definir altura do body -de todo a campo da a pagina- 100vh 100% da altura do wiewport **/
+    box-sizing: border-box; /** os filhos nao vao sair do tamanho do body**/
+}
+
+
+main{
+    background-color: #f5f2d0;
+}
+
+
+.titulo-h1{
+    display: flex;
+    color: black;
+    font-weight: bold;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.titulo-h3{
+    display: flex;
+    color: black;
+    font-weight: bold;
+    justify-content:left; 
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    margin-left: 30px;
+
+}
+
+
+/** XXXXXXXXXXXXXXXXXXXCONF DO PERFIL DO USUARIO XXXXXXXXXXXXXXXXXXX **/
+.conf-perfil{
+
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+}
+
+.conf-card{
+
+    display:flex ;
+    flex-direction: row;
+    align-items: top;
+}
+
+.dados-perfil{
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    background-color: gainsboro;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border-width: 15px;
+    border-style: solid;
+    border-color: gainsboro;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+    
+}
+
+/** PEDIR USUSARIO PARA ADD IMAGEM xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx **/
+
+/**LOGO XXXXXXXXXXX **/
+#picture__input {
+    display: none;
+}
+
+.picture{
+    width: 250px;
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #615f5f;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+}
+
+
+
+
+.picture:hover {  /** quando passar o mouse**/
+    color: #777;
+    background: #ccc;
+}
+
+.picture:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.picture__img {
+    max-width: 100%;
+}
+
+
+
+/**USUARIO XXXXXX**/
+
+#picture__input-perfil {
+    display: none;
+}
+
+.picture-perfil{
+    width: 250px;
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #615f5f;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+}
+
+.picture-perfil:hover {  /** quando passar o mouse**/
+    color: #777;
+    background: #ccc;
+}
+
+.picture-perfil:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.picture__image-perfil {
+    max-width: 100%;
+}
+
+/**PRODUTOs XXXXXX**/
+
+#picture__input-cardapio {
+    display: none;
+}
+
+.picture-cardapio{
+    display: grid;
+    width: 250px;
+    height: 600px;
+    height: auto;
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #615f5f;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+    margin: 30px;
+}
+
+.picture-cardapio:hover {  /** quando passar o mouse**/
+    color: #777;
+    background: #ccc;
+}
+
+.picture-cardapio:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.picture__image-cardapio {
+    max-width: 100%;
+}
+
+
+.imgs-perfil{
+    margin: 30px;
+}
+
+.ad{
+
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 30px;
+    justify-content: end;
+    
+}
+
+.propaganda{
+
+    max-width:450px;
+    max-height:450px;
+    width: auto; /** auto para n perder a proporção**/
+    height: auto;
+   
+ }
+
+.form{
+    display: grid;
+    width:450px;
+}
+
+.form2{
+    display: grid;
+    width:350px;
+}
+
+/** XXXXXXXXXXXXXXXXXXXCONF CARDAPIO XXXXXXXXXXXXXXXXXXX **/
+
+.todo-cardapio{
+    display: grid;
+}
+
+.botaoAdd{
+    padding-left: 30px;
+    
+}
+   
+
+
+
+    
+ 
+
+
