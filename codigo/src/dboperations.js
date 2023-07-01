@@ -92,12 +92,12 @@ async function deleteprodutor(produtorCodigo_produtor){
 }
 
 
-async function getproduto(produtoCodigo_produto){
+async function getproduto(produtor){
     try{
         let pool = await sql.connect(config);
         let TemperodeCasa = await pool.request()
-        .input('input_parameter', sql.Int, produtoCodigo_produto)
-        .query("SELECT * from [dbo].[Produtos] where Codigo_produto = @input_parameter");
+        .input('input_parameter', sql.Int, produtor)
+        .query("SELECT * from [dbo].[Produtos] where produtor = @input_parameter");
         return TemperodeCasa.recordsets;
     }
     catch (erro){
@@ -175,7 +175,6 @@ async function updtCliente(cliente){
                 ,[Data_cadastro] = '${cliente.Data_cadastro}'
                 ,[Nome] = '${cliente.Nome}'
                 ,[Endereco] = '${cliente.Endereco}'
-                ,[Tipo_conta] = '${cliente.Tipo_conta}'
                 ,[CPF] = '${cliente.CPF}'
                 WHERE Codigo_cliente = @input_parameter`);
         return TemperodeCasa.recordsets;
@@ -201,6 +200,7 @@ async function updtProdutor(produtor){
                 ,[Tipo_conta] = '${produtor.Tipo_conta}'
                 ,[Endereco] = '${produtor.Endereco}'
                 ,[CPF] = '${produtor.CPF}'
+                ,[Imagem] = '${produtor.Imagem}'
                 WHERE Codigo_produtor = @input_parameter`);
         return TemperodeCasa.recordsets;
     }
@@ -219,6 +219,8 @@ async function updtPedido(pedido){
                 [Preco_total] = '${pedido.Preco_total}'
                 ,[Data] = '${pedido.Data}'
                 ,[Endereco_entrega] = '${pedido.Endereco_entrega}'
+                ,[Cliente] = '${pedido.Cliente}'
+                ,[Produtor] = '${pedido.Produtor}'
                 WHERE Codigo_pedido = @input_parameter`);
         return TemperodeCasa.recordsets;
     }
@@ -269,7 +271,6 @@ async function addcliente(cliente){
                 ,[Data_cadastro]
                 ,[Nome]
                 ,[Endereco]
-                ,[Tipo_conta]
             ) VALUES (
                 '${cliente.Codigo_cliente}',
                 '${cliente.CPF}',
@@ -278,9 +279,7 @@ async function addcliente(cliente){
                 '${cliente.Senha}',
                 '${cliente.Data_cadastro}',
                 '${cliente.Nome}',
-                '${cliente.Endereco}',
-                '${cliente.Tipo_conta}'
-
+                '${cliente.Endereco}'
             )
         `);
         return TemperodeCasa.recordsets;
@@ -304,6 +303,7 @@ async function addprodutor(produtor){
                 ,[Endereco]
                 ,[Tipo_conta]
                 ,[Nome_loja]
+                ,[Imagem]
             ) VALUES (
                 '${produtor.Codigo_produtor}',
                 '${produtor.CPF}',
@@ -313,8 +313,9 @@ async function addprodutor(produtor){
                 '${produtor.Data_cadastro}',
                 '${produtor.Nome_proprietario}',
                 '${produtor.Endereco}',
-                '${produtor.Tipo_conta}'
-                '${produtor.Nome_loja}'
+                '${produtor.Tipo_conta}',
+                '${produtor.Nome_loja}',
+                '${produtor.Imagem}'
 
             )
         `);
@@ -333,11 +334,15 @@ async function addpedido(pedido){
                 ,[Data]
                 ,[Endereco_entrega]
                 ,[Preco_total]
+                ,[Cliente]
+                ,[Produtor]
             ) VALUES (
                 '${pedido.Codigo_pedido}',
                 '${pedido.Data}',
                 '${pedido.Endereco_entrega}',
-                '${pedido.Preco_total}'
+                '${pedido.Preco_total}',
+                '${pedido.Cliente}',
+                '${pedido.Produtor}'
 
             )
         `);
@@ -347,6 +352,36 @@ async function addpedido(pedido){
         console.log(error);
     }
 }
+
+async function arrayprodutos() {
+    try {
+      let TemperodeCasa = await sql.connect(config);
+      let recordset = await TemperodeCasa.request().query("SELECT * from [dbo].[Pedidos]");
+  
+      let produtosArray = [];
+  
+      recordset.recordset.forEach((registro) => {
+        let produto = {
+          Codigo_produto: registro.Codigo_produto,
+          Nome: registro.Nome,
+          Preco: registro.Preco,
+          Categoria: registro.Categoria,
+          Descricao: registro.Descricao,
+          Prazo_min: registro.Prazo_min,
+          produtor: registro.produtor,
+          // atribua outras propriedades do registro às propriedades do objeto
+        };
+  
+        produtosArray.push(produto);
+      });
+  
+      return produtosArray;
+    } catch (erro) {
+      console.log(erro);
+    }
+  }
+
+  
 
 module.exports = {
     getprodutos : getprodutos,
@@ -368,5 +403,6 @@ module.exports = {
     getpedido : getpedido,
     addpedido : addpedido,
     deletepedido : deletepedido,
-    updtPedido : updtPedido
+    updtPedido : updtPedido,
+    arrayprodutos: arrayprodutos
 }

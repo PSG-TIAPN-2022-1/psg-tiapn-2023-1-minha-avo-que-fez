@@ -38,8 +38,8 @@ router.route('/produtos/:Codigo_produto').delete((request,response)=>{
     })
 })
 
-router.route('/produtos/:Codigo_produto').get((request,response)=>{
-    dboperations.getproduto(request.params.Codigo_produto).then(results=>{
+router.route('/produtos/:produtor').get((request,response)=>{
+    dboperations.getproduto(request.params.produtor).then(results=>{
         response.json(results[0]);
     })
 })

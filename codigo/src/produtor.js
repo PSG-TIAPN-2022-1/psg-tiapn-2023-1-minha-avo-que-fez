@@ -1,5 +1,5 @@
 class Produtor{
-    constructor(Codigo_produtor, CPF, Email, Celular, Senha, Data_cadastro, Nome_proprietario, Endereco, Tipo_conta, Nome_loja){
+    constructor(Codigo_produtor, CPF, Email, Celular, Senha, Data_cadastro, Nome_proprietario, Endereco, Tipo_conta, Nome_loja, Imagem){
         this.Codigo_produtor = Codigo_produtor;
         this.CPF = CPF;
         this.Email = Email;
@@ -10,6 +10,7 @@ class Produtor{
         this.Endereco = Endereco;
         this.Tipo_conta = Tipo_conta;
         this.Nome_loja = Nome_loja;
+        this.Imagem = Imagem;
     }
 }
 

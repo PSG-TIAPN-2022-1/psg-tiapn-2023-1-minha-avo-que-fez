@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://raw.githubusercontent.com/PSG-TIAPN-2022-1/psg-tiapn-2023-1-minha-avo-que-fez/f7c165f97ab8305cb3d1723118ba99ed731df363/codigo/src/images/egg-fried.svg?token=AYSY2LDKY7QZLV4FICJSVPLETWKWG" type="image/icon type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- LINK COM O CSS-->
+
+</head>
+
+<body> 
+    
+    <header> 
+
+    </header>
+
+    <main>
+
+        <h1><strong class="titulo-h1">Configurações</strong></h1>
+        <br>
+
+         <!-- XXXXXXXXXXXX INICIO PERFIL USUARIO XXXXXXXXXXXXX-->
+
+        <h3 class="titulo-h3">Configuração de perfil de usuário</h3>
+
+        <div class="conf-perfil">
+
+            <div class="imgs-perfil">  <!-- FAZER FLEXBOX -->
+
+                
+                <!-- XXXXXXXXXXXXXXXX PEDIR USUARIO PARA COLOCAR IMAGEM XXXXXXXXXXXXXXXXXX-->
+                <label class="picture" for="picture__input" tabIndex="0">
+                    <span class="picture__image"></span>
+                </label>
+                <input type="file" name="picture__input" id="picture__input">
+
+                <br>
+                <br>
+
+                 <!-- XXXXXXXXXXXXXXXX PEDIR USUARIO PARA COLOCAR IMAGEM XXXXXXXXXXXXXXXXXX-->
+                <label class="picture-perfil" for="picture__input-perfil" tabIndex="0">
+                    <span class="picture__image-perfil"></span>
+                </label>
+                <input type="file" name="picture__input-perfil" id="picture__input-perfil">
+
+            </div>
+
+            <br>
+            <br>
+
+            <div class="dados-perfil">
+                
+                <form class="form" style="display: grid;">
+                    <label for="m-nome">NOME DA LOJA:</label>
+                    <input id="m-nome" type="text" required />
+                    <br>
+                    <label for="m-categoria">NOME:</label>
+                    <input id="m-categoria" type="text" required />
+                    <br>
+                    <label for="m-sdescricao">E-MAIL:</label>
+                    <input id="m-descricao" type="text" required />
+                    <br>
+                    <label for="m-valor">CELULAR:</label>
+                    <input id="m-valor" type="text" required />
+                    <br>
+                    <label for="m-cpf">CPF:</label>
+                    <input id="m-cpf" type="text" required />
+                    <br>
+                    <button style="width: 50px;" id="btnSalvar">Salvar</button>
+                    <br>
+                    <p>Assinatura:</p>
+
+                </form>
+
+            </div>
+
+            <div class="ad">
+
+                <a href="">  <!-- XXXXXXXXXXXXXXXX  FALTA O LINK DA PAG DA ASSINATURA  XXXXXXXXXXXXXXXXXX--> 
+                <img class="propaganda" src="../images/Assinatura Premium.PNG"  alt="Assinatura Premium">
+                </a>
+
+            </div>
+            
+        </div>
+
+        <!-- XXXXXXXXXXXX INICIO CARDAPIO  XXXXXXXXXXXXX-->
+
+        <h3 class="titulo-h3"> Configuração de cardápio </h3> <!-- XXXXXXXXXXXX título  XXXXXXXXXXXXX-->
+
+        
+        
+        
+        
+        
+        <div id="botaoA">
+        <button class="titulo-h3" type="button" onclick="botaoAdd()">+Add</button>
+
+            <div class="conf-card"> <!-- XXXXXXXXXXXX Todos os produtos do cardápio  XXXXXXXXXXXXX-->
+
+                <!--  imagem 1º cardapio  -->
+
+                <!-- XXXXXXXXXXXXXXXX PEDIR USUARIO PARA COLOCAR IMAGEM XXXXXXXXXXXXXXXXXX -->
+
+                
+
+                <label class="picture-cardapio" for="picture__input-cardapio" tabIndex="0">
+                    <span class="picture__image-cardapio"></span>
+                </label>
+                <input type="file" name="picture__input-cardapio" id="picture__input-cardapio">
+
+
+
+                
+                <div class="dados-perfil">
+
+                    <form class="form2" style="display: grid;">
+
+                        <label for="m-nome1">NOME:</label>
+                        <input id="m-nome1" type="text" required />
+                        <br>    
+                        <label for="m-categoria1">CATEGORIA:</label>
+                        <input id="m-categoria1" type="text" required />
+                        <br>   
+                        <label for="m-sdescricao1">DESCRIÇÃO:</label>
+                        <input id="m-descricao1" type="text" required />
+                        <br>
+                        <label for="m-valor1">VALOR:</label>
+                        <input id="m-valor1" type="text" required />
+                        <br>
+                        <button style="width: 50px;" id="btnSalvar">Salvar</button>   
+
+                    </form>
+                </div>
+
+            </div>        
+        </div>
+
+            <!-- XXXXXXXXXXXX 2º cardapio  XXXXXXXXXXXXX-->
+
+            
+
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
